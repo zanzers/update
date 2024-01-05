@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<center>
+    <br/><br/>
+    <h1>Delete Category</h1>
+    <br/>
+    <center>
+        <td>
+        <br/>
+        <div class="form-row ">
+            <p>Are you sure you want to delete "{{ category_name }}"?</p>
+
+            <form action="" method=POST>
+                {% csrf_token %}
+        
+                {{ form.as_p}}
+            
+                <input type="submit" value="Delete" class="btn btn-danger">
+            </form>
+
+        </div>
+    </td>
+</center>
+     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    
+</center>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<br/><br/><br/><br/>
+<center>
+<h1>Add Product</h1></center>
+<br/><br/>
+<center>
+  
+    
+{% if submitted %}
+    Submitted Successfully!!!
+
+    {% else %}
+</center>
+<form action ="" method=POST enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    <center><button type="submit" class="btn btn-primary">Add Product</button></center>
+    </form>
+
+{% endif %}
+<br/><br/><br/><br/><br/><br/><br/>
+
+{% endblock %}
